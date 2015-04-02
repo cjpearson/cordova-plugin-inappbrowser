@@ -84,6 +84,9 @@
 @property (nonatomic, weak) CDVInAppBrowser* navigationDelegate;
 @property (nonatomic) NSURL* currentURL;
 
+@property (nonatomic) BOOL statusBarOverlaysWebView;
+@property (nonatomic, strong) NSString* toolbarPosition;
+
 - (void)close;
 - (void)navigateTo:(NSURL*)url;
 - (void)showLocationBar:(BOOL)show;
