@@ -1,9 +1,9 @@
 {
   "name": "cordova-plugin-inappbrowser",
-  "version": "0.6.1-dev",
+  "version": "1.4.1-dev",
   "description": "Cordova InAppBrowser Plugin",
   "cordova": {
-    "id": "org.apache.cordova.inappbrowser",
+    "id": "cordova-plugin-inappbrowser",
     "platforms": [
       "android",
       "amazon-fireos",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git"
+    "url": "https://github.com/apache/cordova-plugin-inappbrowser"
   },
   "keywords": [
     "cordova",
@@ -37,12 +37,20 @@
     "cordova-windows",
     "cordova-firefoxos"
   ],
-  "engines": [
-    {
-      "name": "cordova",
-      "version": ">=3.1.0"
+  "scripts": {
+    "test": "npm run jshint",
+    "jshint": "node node_modules/jshint/bin/jshint www && node node_modules/jshint/bin/jshint src && node node_modules/jshint/bin/jshint tests"
+  },
+  "engines": {
+    "cordovaDependencies": {
+      "0.2.3": {
+        "cordova": ">=3.1.0"
+      }
     }
-  ],
+  },
   "author": "Apache Software Foundation",
-  "license": "Apache 2.0"
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "jshint": "^2.6.0"
+  }
 }
